@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{{ super() }}
+
+{% block content %}
+  <a class="mt-5 link-light" href="{{ url_for('website.home') }}"> <i class="fas fa-home fa-3x"></i> </a>
+
+  <div class="container d-flex flex-grow-1">
+    <h1 class="text-white align-self-center mx-auto"> Too many requests </h1>
+  </div>
+
+  {% include "footer.html" %}
+
+{% endblock content %}

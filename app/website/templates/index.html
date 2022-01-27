@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{{ super }}
+
+{% block content %}
+    <div class="d-flex flex-column mt-auto mb-5">
+        <h1 class="text-white"> Ask Me Anything GPT-3 </h1>
+    </div>
+
+
+    <form class="d-flex align-items-center w-100" method="post">
+      {{ form.csrf_token }}
+      <label for="question" class="form-label text-white mx-2 my-auto"> Question </label>
+      <input class="form-control mx-2" name="question" id="question" {% if question %} placeholder="{{ question }}" {% endif %}>
+      <button class="btn btn-outline-light rounded-pill mx-2 my-auto px-4" type="submit" > Ask </button>
+    </form>
+
+    {% if answer %}
+    <div class="d-flex align-items-start justify-content-start mt-4 w-100">
+        <label class="form-label text-white mx-2 p-1 my-auto"> Answer </label>
+        <p class="flex-grow-1 text-dark bg-white rounded my-auto text-break mx-2 p-2"> {{ answer }} </p>
+    </div>
+    {% endif %}
+
+    {% include "footer.html" %}
+
+{% endblock content %}
