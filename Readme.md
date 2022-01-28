@@ -1,6 +1,9 @@
 <h1 align="center">Ask Me Anything GPT-3</h1>
 
-A simple wrapper for OpenAI GPT-3 question/answer engine.
+<div align="cetner">
+  <p align="center">A simple wrapper for OpenAI GPT-3 question/answer engine.</p>
+  <img src="assets/website.png" alt="AMA GTP3"></img>
+</div>
 
 <br>
 
