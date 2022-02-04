@@ -117,3 +117,8 @@ Badr BADRI @pythops
 AGPLv3
 
 Copyright © 2022 Badr BADRI @pythops
+
+<br>
+
+## ℹ️  OpenAI Policies
+Anyone who is willing to copy this  code and launch their own Q&A app, must follow OpenAI going live policy 👉 https://beta.openai.com/docs/going-live
