@@ -1,11 +1,13 @@
 import quart.flask_patch  # noqa
 from flask_wtf.csrf import CSRFProtect
 from quart import Quart
+from quart_rate_limiter import RateLimiter
 
 from app import http
 from app.config import config
 
 csrf = CSRFProtect()
+rate_limiter = RateLimiter()
 
 
 def init_website():
@@ -14,6 +16,7 @@ def init_website():
 
     http.client.init()
     csrf.init_app(server)
+    rate_limiter.init_app(server)
 
     from app.api.views import api
     from app.website.errors import errors
