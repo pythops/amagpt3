@@ -1,5 +1,5 @@
-from marshmallow import Schema, fields
+from marshmallow import Schema, fields, validate
 
 
 class QuestionSchema(Schema):
-    question = fields.Str()
+    question = fields.Str(validate=validate.Length(30))
