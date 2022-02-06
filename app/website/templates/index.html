@@ -11,7 +11,19 @@
     <form class="d-flex align-items-center w-100" method="post">
       {{ form.csrf_token }}
       <label for="question" class="form-label text-white mx-2 my-auto"> Question </label>
-      <input class="form-control mx-2" name="question" id="question" {% if question %} placeholder="{{ question }}" {% endif %}>
+      <div class="input-group has-validation">
+        {% if form.question.errors %}
+          <input class="form-control is-invalid mx-2" name="question" id="question" {% if question %} placeholder="{{ question }}" {% endif %}>
+          {% for error in form.question.errors %}
+          <div class="invalid-feedback">
+            <div class="mx-2">{{ error }}</div>
+          </div>
+          {% endfor %}
+        {% else %}
+          <input class="form-control is-valid mx-2" name="question" id="question" {% if question %} placeholder="{{ question }}" {% endif %}>
+        {% endif %}
+      </div>
+
       <button class="btn btn-outline-light rounded-pill mx-2 my-auto px-4" type="submit" > Ask </button>
     </form>
 
