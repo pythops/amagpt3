@@ -1,4 +1,5 @@
 quart
+quart-rate-limiter
 httpx
 hypercorn
 webargs

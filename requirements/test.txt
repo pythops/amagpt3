@@ -8,13 +8,13 @@ anyio==3.5.0
     # via httpcore
 attrs==21.4.0
     # via pytest
-black==21.12b0
+black==22.1.0
     # via flake8-black
 certifi==2021.10.8
     # via
     #   httpcore
     #   httpx
-charset-normalizer==2.0.10
+charset-normalizer==2.0.11
     # via httpx
 click==8.0.3
     # via black
@@ -22,13 +22,13 @@ flake8==4.0.1
     # via
     #   flake8-black
     #   flake8-isort
-flake8-black==0.2.3
+flake8-black==0.2.4
     # via -r requirements/test.in
 flake8-isort==4.1.1
     # via -r requirements/test.in
 h11==0.12.0
     # via httpcore
-httpcore==0.14.5
+httpcore==0.14.7
     # via httpx
 httpx==0.22.0
     # via pytest-httpx
@@ -64,14 +64,14 @@ pyflakes==2.4.0
     # via flake8
 pyparsing==3.0.7
     # via packaging
-pytest==6.2.5
+pytest==7.0.0
     # via
     #   pytest-asyncio
     #   pytest-httpx
     #   pytest-icdiff
 pytest-asyncio==0.17.2
     # via -r requirements/test.in
-pytest-httpx==0.19.0
+pytest-httpx==0.20.0
     # via -r requirements/test.in
 pytest-icdiff==0.5
     # via -r requirements/test.in
@@ -85,10 +85,8 @@ sniffio==1.2.0
 testfixtures==6.18.3
     # via flake8-isort
 toml==0.10.2
+    # via flake8-black
+tomli==2.0.0
     # via
-    #   flake8-black
+    #   black
     #   pytest
-tomli==1.2.3
-    # via black
-typing-extensions==4.0.1
-    # via black
