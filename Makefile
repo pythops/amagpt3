@@ -40,29 +40,29 @@ dev:
 
 pip-update:
 	@(\
-			pip-compile --output-file=requirements/common.txt -U requirements/common.in &&  \
-			pip-compile --output-file=requirements/cli.txt -U requirements/cli.in &&  \
-			pip-compile --output-file=requirements/website.txt -U requirements/website.in &&  \
-			pip-compile --output-file=requirements/dev.txt -U requirements/dev.in && \
-			pip-compile --output-file=requirements/test.txt -U requirements/test.in  \
+      pip-compile --output-file=requirements/common.txt -U requirements/common.in &&  \
+      pip-compile --output-file=requirements/cli.txt -U requirements/cli.in &&  \
+      pip-compile --output-file=requirements/website.txt -U requirements/website.in &&  \
+      pip-compile --output-file=requirements/dev.txt -U requirements/dev.in && \
+      pip-compile --output-file=requirements/test.txt -U requirements/test.in  \
 		)
 
 run-api:
 	@(\
-	    source .venv/bin/activate && \
-			hypercorn run-api:api --reload \
+      source .venv/bin/activate && \
+      hypercorn run-api:api --reload \
 		)
 
 
 run-website:
 	@(\
-	    source .venv/bin/activate && \
-			hypercorn --reload run-website:website \
+      source .venv/bin/activate && \
+      hypercorn --access-logfile - --error-logfile - run-website:website \
 		)
 
 test:
 	@(\
-	    source .venv/bin/activate && \
-			flake8 && \
-			pytest tests \
+      source .venv/bin/activate && \
+      flake8 && \
+      pytest tests \
 		)
