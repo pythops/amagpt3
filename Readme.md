@@ -7,7 +7,15 @@
 
 <br>
 
+## 💫 Demo
+Here is a free and publicly available instance that you can play with
+
+**https://amagpt3.com**
+
+<br>
+
 ## 🔌 Installation
+
 ### API
 ```
 $ make setup-api
