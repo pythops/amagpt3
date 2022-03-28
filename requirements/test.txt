@@ -8,7 +8,7 @@ anyio==3.5.0
     # via httpcore
 attrs==21.4.0
     # via pytest
-black==22.1.0
+black==22.3.0
     # via flake8-black
 certifi==2021.10.8
     # via
@@ -16,7 +16,7 @@ certifi==2021.10.8
     #   httpx
 charset-normalizer==2.0.12
     # via httpx
-click==8.0.4
+click==8.1.0
     # via black
 flake8==4.0.1
     # via
@@ -69,7 +69,7 @@ pytest==7.1.1
     #   pytest-asyncio
     #   pytest-httpx
     #   pytest-icdiff
-pytest-asyncio==0.18.2
+pytest-asyncio==0.18.3
     # via -r requirements/test.in
 pytest-httpx==0.20.0
     # via -r requirements/test.in

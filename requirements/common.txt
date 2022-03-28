@@ -16,7 +16,7 @@ certifi==2021.10.8
     #   httpx
 charset-normalizer==2.0.12
     # via httpx
-click==8.0.4
+click==8.1.0
     # via quart
 h11==0.12.0
     # via
@@ -41,12 +41,14 @@ idna==3.3
     # via
     #   anyio
     #   rfc3986
-itsdangerous==2.1.1
+itsdangerous==2.1.2
     # via quart
-jinja2==3.0.3
+jinja2==3.1.1
     # via quart
 markupsafe==2.1.1
-    # via jinja2
+    # via
+    #   jinja2
+    #   quart
 marshmallow==3.15.0
     # via webargs
 packaging==21.3
@@ -57,7 +59,7 @@ priority==2.0.0
     # via hypercorn
 pyparsing==3.0.7
     # via packaging
-quart==0.16.3
+quart==0.17.0
     # via
     #   -r requirements/common.in
     #   quart-rate-limiter
@@ -76,7 +78,7 @@ toml==0.10.2
     #   quart
 webargs==8.1.0
     # via -r requirements/common.in
-werkzeug==2.0.3
+werkzeug==2.1.0
     # via quart
 wsproto==1.1.0
     # via hypercorn
