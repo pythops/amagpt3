@@ -10,7 +10,7 @@ website = Blueprint("website", __name__)
 
 
 @website.route("/", methods=["GET", "POST"])
-@rate_limit(1, timedelta(seconds=1))
+@rate_limit(3, timedelta(seconds=1))
 async def home():
     form = QuestionForm()
     answer = ""
