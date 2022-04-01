@@ -64,5 +64,5 @@ test:
 	@(\
       source .venv/bin/activate && \
       flake8 && \
-      pytest tests \
+      pytest tests --cov app/ \
 		)
