@@ -4,4 +4,4 @@ from wtforms.validators import DataRequired, length
 
 
 class QuestionForm(FlaskForm):
-    question = StringField("question", validators=[DataRequired(), length(max=50)])
+    question = StringField("question", validators=[DataRequired(), length(max=100)])
