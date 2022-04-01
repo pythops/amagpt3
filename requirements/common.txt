@@ -16,7 +16,7 @@ certifi==2021.10.8
     #   httpx
 charset-normalizer==2.0.12
     # via httpx
-click==8.1.0
+click==8.1.2
     # via quart
 h11==0.12.0
     # via

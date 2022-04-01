@@ -4,5 +4,5 @@
 #
 #    pip-compile --output-file=requirements/cli.txt requirements/cli.in
 #
-click==8.1.0
+click==8.1.2
     # via -r requirements/cli.in

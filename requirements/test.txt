@@ -16,8 +16,10 @@ certifi==2021.10.8
     #   httpx
 charset-normalizer==2.0.12
     # via httpx
-click==8.1.0
+click==8.1.2
     # via black
+coverage[toml]==6.3.2
+    # via pytest-cov
 flake8==4.0.1
     # via
     #   flake8-black
@@ -47,7 +49,9 @@ mccabe==0.6.1
 mypy-extensions==0.4.3
     # via black
 packaging==21.3
-    # via pytest
+    # via
+    #   pytest
+    #   pytest-sugar
 pathspec==0.9.0
     # via black
 platformdirs==2.5.1
@@ -67,13 +71,19 @@ pyparsing==3.0.7
 pytest==7.1.1
     # via
     #   pytest-asyncio
+    #   pytest-cov
     #   pytest-httpx
     #   pytest-icdiff
+    #   pytest-sugar
 pytest-asyncio==0.18.3
+    # via -r requirements/test.in
+pytest-cov==3.0.0
     # via -r requirements/test.in
 pytest-httpx==0.20.0
     # via -r requirements/test.in
 pytest-icdiff==0.5
+    # via -r requirements/test.in
+pytest-sugar==0.9.4
     # via -r requirements/test.in
 rfc3986[idna2008]==1.5.0
     # via httpx
@@ -82,10 +92,13 @@ sniffio==1.2.0
     #   anyio
     #   httpcore
     #   httpx
+termcolor==1.1.0
+    # via pytest-sugar
 testfixtures==6.18.5
     # via flake8-isort
 tomli==2.0.1
     # via
     #   black
+    #   coverage
     #   flake8-black
     #   pytest
