@@ -111,8 +111,7 @@ $ ./cli.py ask "YOUR QUESTION HERE"
 
 ### Slack
 ```
-$ source .venv/bin/activate
-$ make slack
+$ make run-slack
 ```
 
 <br>
