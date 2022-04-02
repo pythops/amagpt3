@@ -31,6 +31,11 @@ $ make setup-website
 $ make setup-cli
 ```
 
+### Slack Bot
+```
+$ make setup-slack
+```
+
 <br>
 
 ## Configuration
@@ -46,6 +51,15 @@ $ export OPENAI_MODEL=<MODEL>
 By default, `curie` model  is used.
 
 More infos here 👉 https://beta.openai.com/docs/api-reference/answers
+
+<br>
+
+For Slack bot, you need to provide the following tokens:
+```
+$ export SLACK_APP_TOKEN=xoxb-xxx
+$ export SLACK_BOT_TOKEN=xapp-xxx
+```
+More infos here 👉 https://api.slack.com/bot-users
 
 <br>
 
@@ -93,6 +107,12 @@ Screenshot:
 ```
 $ source .venv/bin/activate
 $ ./cli.py ask "YOUR QUESTION HERE"
+```
+
+### Slack
+```
+$ source .venv/bin/activate
+$ make slack
 ```
 
 <br>
