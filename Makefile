@@ -26,6 +26,15 @@ setup-website:
 	    pip3 install -r requirements/website.txt \
 		)
 
+setup-slack:
+	@(\
+	    python3 -m venv .venv && \
+	    source .venv/bin/activate &&  \
+	    pip3 install -U pip && \
+	    pip3 install -r requirements/common.txt && \
+	    pip3 install -r requirements/slack.txt \
+		)
+
 dev:
 	@(\
 	    python3 -m venv .venv && \
@@ -35,6 +44,7 @@ dev:
 	    pip3 install -r requirements/cli.txt && \
 	    pip3 install -r requirements/website.txt && \
 	    pip3 install -r requirements/dev.txt && \
+	    pip3 install -r requirements/slack.txt && \
 	    pip3 install -r requirements/test.txt \
 		)
 
@@ -44,6 +54,7 @@ pip-update:
       pip-compile --output-file=requirements/cli.txt -U requirements/cli.in &&  \
       pip-compile --output-file=requirements/website.txt -U requirements/website.in &&  \
       pip-compile --output-file=requirements/dev.txt -U requirements/dev.in && \
+      pip-compile --output-file=requirements/slack.txt -U requirements/slack.in && \
       pip-compile --output-file=requirements/test.txt -U requirements/test.in  \
 		)
 
@@ -58,6 +69,12 @@ run-website:
 	@(\
       source .venv/bin/activate && \
       hypercorn --access-logfile - --error-logfile - run-website:website \
+		)
+
+run-slack:
+	@(\
+      source .venv/bin/activate && \
+      python slack.py \
 		)
 
 test:
