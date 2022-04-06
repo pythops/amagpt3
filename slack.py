@@ -12,7 +12,9 @@ async def slack_answer(ack, body, respond):
     await ack()
     question = body.get("text")
     answer = await openai.ask(question)
-    response = f"*Question:* {question}\n*Answer:* {answer}"
+    response = (
+        f"*Author:* <@{body['user_id']}>\n*Question:* {question}\n*Answer:* {answer}"
+    )
     await respond(response, response_type="in_channel")
 
 
