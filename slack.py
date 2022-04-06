@@ -13,7 +13,7 @@ async def slack_answer(ack, body, respond):
     question = body.get("text")
     answer = await openai.ask(question)
     response = f"*Question:* {question}\n*Answer:* {answer}"
-    await respond(response)
+    await respond(response, response_type="in_channel")
 
 
 async def main():
