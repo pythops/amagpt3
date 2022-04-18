@@ -57,13 +57,13 @@ packaging==21.3
     #   webargs
 priority==2.0.0
     # via hypercorn
-pyparsing==3.0.7
+pyparsing==3.0.8
     # via packaging
 quart==0.17.0
     # via
     #   -r requirements/common.in
     #   quart-rate-limiter
-quart-rate-limiter==0.6.0
+quart-rate-limiter==0.7.0
     # via -r requirements/common.in
 rfc3986[idna2008]==1.5.0
     # via httpx
@@ -78,7 +78,7 @@ toml==0.10.2
     #   quart
 webargs==8.1.0
     # via -r requirements/common.in
-werkzeug==2.1.0
+werkzeug==2.1.1
     # via quart
 wsproto==1.1.0
     # via hypercorn
