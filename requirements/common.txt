@@ -16,7 +16,7 @@ certifi==2021.10.8
     #   httpx
 charset-normalizer==2.0.12
     # via httpx
-click==8.1.2
+click==8.1.3
     # via quart
 h11==0.12.0
     # via
@@ -43,7 +43,7 @@ idna==3.3
     #   rfc3986
 itsdangerous==2.1.2
     # via quart
-jinja2==3.1.1
+jinja2==3.1.2
     # via quart
 markupsafe==2.1.1
     # via
@@ -78,7 +78,7 @@ toml==0.10.2
     #   quart
 webargs==8.1.0
     # via -r requirements/common.in
-werkzeug==2.1.1
+werkzeug==2.1.2
     # via quart
 wsproto==1.1.0
     # via hypercorn

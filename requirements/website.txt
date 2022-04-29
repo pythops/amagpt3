@@ -4,9 +4,9 @@
 #
 #    pip-compile --output-file=requirements/website.txt requirements/website.in
 #
-click==8.1.2
+click==8.1.3
     # via flask
-flask==2.1.1
+flask==2.1.2
     # via flask-wtf
 flask-wtf==1.0.1
     # via -r requirements/website.in
@@ -14,13 +14,13 @@ itsdangerous==2.1.2
     # via
     #   flask
     #   flask-wtf
-jinja2==3.1.1
+jinja2==3.1.2
     # via flask
 markupsafe==2.1.1
     # via
     #   jinja2
     #   wtforms
-werkzeug==2.1.1
+werkzeug==2.1.2
     # via flask
 wtforms==3.0.1
     # via flask-wtf
