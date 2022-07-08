@@ -10,7 +10,7 @@ anyio==3.6.1
     # via httpcore
 blinker==1.4
     # via quart
-certifi==2022.5.18.1
+certifi==2022.6.15
     # via
     #   httpcore
     #   httpx
@@ -47,7 +47,7 @@ markupsafe==2.1.1
     # via
     #   jinja2
     #   quart
-marshmallow==3.16.0
+marshmallow==3.17.0
     # via webargs
 packaging==21.3
     # via
