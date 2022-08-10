@@ -8,7 +8,7 @@ aiofiles==0.8.0
     # via quart
 anyio==3.6.1
     # via httpcore
-blinker==1.4
+blinker==1.5
     # via quart
 certifi==2022.6.15
     # via
@@ -47,6 +47,7 @@ markupsafe==2.1.1
     # via
     #   jinja2
     #   quart
+    #   werkzeug
 marshmallow==3.17.0
     # via webargs
 packaging==21.3
@@ -57,7 +58,7 @@ priority==2.0.0
     # via hypercorn
 pyparsing==3.0.9
     # via packaging
-quart==0.17.0
+quart==0.18.0
     # via
     #   -r requirements/common.in
     #   quart-rate-limiter
@@ -71,12 +72,10 @@ sniffio==1.2.0
     #   httpcore
     #   httpx
 toml==0.10.2
-    # via
-    #   hypercorn
-    #   quart
-webargs==8.1.0
+    # via hypercorn
+webargs==8.2.0
     # via -r requirements/common.in
-werkzeug==2.1.2
+werkzeug==2.2.2
     # via quart
 wsproto==1.1.0
     # via hypercorn
