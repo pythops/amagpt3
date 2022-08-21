@@ -1,4 +1,4 @@
-quart
+quart==0.17.0
 quart-rate-limiter
 httpx
 hypercorn

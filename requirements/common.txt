@@ -58,7 +58,7 @@ priority==2.0.0
     # via hypercorn
 pyparsing==3.0.9
     # via packaging
-quart==0.18.0
+quart==0.17.0
     # via
     #   -r requirements/common.in
     #   quart-rate-limiter
@@ -72,7 +72,9 @@ sniffio==1.2.0
     #   httpcore
     #   httpx
 toml==0.10.2
-    # via hypercorn
+    # via
+    #   hypercorn
+    #   quart
 webargs==8.2.0
     # via -r requirements/common.in
 werkzeug==2.2.2
