@@ -48,7 +48,7 @@ markupsafe==2.1.1
     #   jinja2
     #   quart
     #   werkzeug
-marshmallow==3.17.0
+marshmallow==3.17.1
     # via webargs
 packaging==21.3
     # via
@@ -79,5 +79,5 @@ webargs==8.2.0
     # via -r requirements/common.in
 werkzeug==2.2.2
     # via quart
-wsproto==1.1.0
+wsproto==1.2.0
     # via hypercorn
