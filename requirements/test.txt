@@ -8,7 +8,7 @@ anyio==3.6.1
     # via httpcore
 attrs==22.1.0
     # via pytest
-black==22.6.0
+black==22.8.0
     # via flake8-black
 certifi==2022.6.15
     # via
@@ -50,7 +50,7 @@ packaging==21.3
     # via
     #   pytest
     #   pytest-sugar
-pathspec==0.9.0
+pathspec==0.10.1
     # via black
 platformdirs==2.5.2
     # via black
@@ -66,7 +66,7 @@ pyflakes==2.5.0
     # via flake8
 pyparsing==3.0.9
     # via packaging
-pytest==7.1.2
+pytest==7.1.3
     # via
     #   pytest-asyncio
     #   pytest-cov
@@ -85,7 +85,7 @@ pytest-sugar==0.9.5
     # via -r requirements/test.in
 rfc3986[idna2008]==1.5.0
     # via httpx
-sniffio==1.2.0
+sniffio==1.3.0
     # via
     #   anyio
     #   httpcore

@@ -29,7 +29,7 @@ httpcore==0.15.0
     # via httpx
 httpx==0.23.0
     # via -r requirements/common.in
-hypercorn==0.13.2
+hypercorn==0.14.1
     # via
     #   -r requirements/common.in
     #   quart
@@ -66,7 +66,7 @@ quart-rate-limiter==0.7.0
     # via -r requirements/common.in
 rfc3986[idna2008]==1.5.0
     # via httpx
-sniffio==1.2.0
+sniffio==1.3.0
     # via
     #   anyio
     #   httpcore
