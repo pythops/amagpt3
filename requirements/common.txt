@@ -4,13 +4,13 @@
 #
 #    pip-compile --output-file=requirements/common.txt requirements/common.in
 #
-aiofiles==0.8.0
+aiofiles==22.1.0
     # via quart
 anyio==3.6.1
     # via httpcore
 blinker==1.5
     # via quart
-certifi==2022.6.15
+certifi==2022.9.14
     # via
     #   httpcore
     #   httpx
@@ -29,13 +29,13 @@ httpcore==0.15.0
     # via httpx
 httpx==0.23.0
     # via -r requirements/common.in
-hypercorn==0.14.1
+hypercorn==0.14.3
     # via
     #   -r requirements/common.in
     #   quart
 hyperframe==6.0.1
     # via h2
-idna==3.3
+idna==3.4
     # via
     #   anyio
     #   rfc3986
@@ -48,7 +48,7 @@ markupsafe==2.1.1
     #   jinja2
     #   quart
     #   werkzeug
-marshmallow==3.17.1
+marshmallow==3.18.0
     # via webargs
 packaging==21.3
     # via

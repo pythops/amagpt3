@@ -10,7 +10,7 @@ attrs==22.1.0
     # via pytest
 black==22.8.0
     # via flake8-black
-certifi==2022.6.15
+certifi==2022.9.14
     # via
     #   httpcore
     #   httpx
@@ -34,7 +34,7 @@ httpx==0.23.0
     # via pytest-httpx
 icdiff==2.0.5
     # via pytest-icdiff
-idna==3.3
+idna==3.4
     # via
     #   anyio
     #   rfc3986
@@ -90,7 +90,7 @@ sniffio==1.3.0
     #   anyio
     #   httpcore
     #   httpx
-termcolor==1.1.0
+termcolor==2.0.1
     # via pytest-sugar
 tomli==2.0.1
     # via
