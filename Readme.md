@@ -117,9 +117,9 @@ $ make run-slack
 <br>
 
 ## ⚒️  Built using
-- [Quart](https://github.com/pgjones/quart)
-- [HTTPX](https://www.python-httpx.org/)
-- [Click](https://click.palletsprojects.com/en/8.0.x/)
+- [Quart](https://github.com/pallets/quart)
+- [HTTPX](https://github.com/encode/httpx/)
+- [Click](https://github.com/pallets/click/))
 
 <br>
 
