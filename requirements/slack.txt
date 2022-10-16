@@ -24,9 +24,9 @@ multidict==6.0.2
     # via
     #   aiohttp
     #   yarl
-slack-bolt==1.14.3
+slack-bolt==1.15.1
     # via -r requirements/slack.in
-slack-sdk==3.18.3
+slack-sdk==3.19.1
     # via slack-bolt
 yarl==1.8.1
     # via aiohttp

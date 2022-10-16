@@ -10,7 +10,7 @@ anyio==3.6.1
     # via httpcore
 blinker==1.5
     # via quart
-certifi==2022.9.14
+certifi==2022.9.24
     # via
     #   httpcore
     #   httpx
