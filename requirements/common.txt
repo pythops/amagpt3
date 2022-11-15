@@ -6,7 +6,7 @@
 #
 aiofiles==22.1.0
     # via quart
-anyio==3.6.1
+anyio==3.6.2
     # via httpcore
 blinker==1.5
     # via quart
@@ -48,7 +48,7 @@ markupsafe==2.1.1
     #   jinja2
     #   quart
     #   werkzeug
-marshmallow==3.18.0
+marshmallow==3.19.0
     # via webargs
 packaging==21.3
     # via
