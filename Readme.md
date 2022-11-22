@@ -12,6 +12,10 @@ Here is a free and publicly available instance that you can play with
 
 **https://amagpt3.com**
 
+**Note**:
+I put some limitations to avoid explode my budget.
+the question and the answer has a max of **100 characters**
+
 <br>
 
 ## 🔌 Installation
@@ -48,9 +52,9 @@ You can get one by signing up for free here 👉 https://openai.com/api/
 ```
 $ export OPENAI_MODEL=<MODEL>
 ```
-By default, `curie` model  is used.
+By default, `text-babbage-001` model  is used.
 
-More infos here 👉 https://beta.openai.com/docs/api-reference/answers
+More infos here 👉 https://beta.openai.com/docs/api-reference/models/list
 
 <br>
 
@@ -67,7 +71,7 @@ More infos here 👉 https://api.slack.com/bot-users
 ### API
 ```
 $ make run-api
-[2022-01-27 15:44:56 +0100] [1560229] [INFO] Running on http://127.0.0.1:8000 (CTRL + C to quit)
+[2022-11-22 13:39:20 +0100] [2381451] [INFO] Running on http://127.0.0.1:8000 (CTRL + C to quit)
 ```
 
 ```
@@ -78,21 +82,24 @@ Example:
 ```
 $ http POST :8000/ask question="how cool is elon musk ?"
 HTTP/1.1 200
-content-length: 28
+content-length: 127
 content-type: application/json
-date: Thu, 27 Jan 2022 14:47:19 GMT
+date: Tue, 22 Nov 2022 12:38:45 GMT
+ratelimit-limit: 1
+ratelimit-remaining: 0
+ratelimit-reset: 0
 server: hypercorn-h11
 
 {
-    "answer": "He is a genius."
+    "answer": "Elon Musk is a business magnate and entrepreneur who co-founded PayPal and Tesla Motors. He also founded SpaceX..."
 }
-```
 
+```
 
 ### Website
 ```
 $ make run-website
-[2022-01-27 15:48:57 +0100] [1564095] [INFO] Running on http://127.0.0.1:8000 (CTRL + C to quit)
+[2022-11-22 13:39:48 +0100] [2381963] [INFO] Running on http://127.0.0.1:8000 (CTRL + C to quit)
 ```
 Then open the url http://127.0.0.1:8000 in your browser
 
@@ -119,7 +126,7 @@ $ make run-slack
 ## ⚒️  Built using
 - [Quart](https://github.com/pallets/quart)
 - [HTTPX](https://github.com/encode/httpx/)
-- [Click](https://github.com/pallets/click/))
+- [Click](https://github.com/pallets/click/)
 
 <br>
 
