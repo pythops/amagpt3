@@ -7,15 +7,12 @@ async def ask(question):
     url = config.OPENAI_URL
     headers = {"Authorization": f"Bearer {config.OPENAI_API_KEY}"}
     body = {
-        "question": question,
+        "prompt": question,
         "model": config.OPENAI_MODEL,
-        "documents": [],
-        "examples_context": "",
-        "examples": [
-            ["What is human life expectancy in the United States?", "78 years."]
-        ],
+        "temperature": config.OPENAI_MODEL_AUDACITY,
+        "max_tokens": config.OPENAI_MAX_TOKEN,
     }
     response = await http.client.post(url, headers=headers, body=body)
 
-    answer = serializers.OpenaiResponseSerializer().dump(response)
+    answer = serializers.OpenaiResponseSerializer().dump(response)["answer"]
     return answer

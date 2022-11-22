@@ -1,9 +1,14 @@
-from marshmallow import Schema, fields, post_dump
+import re
+
+from marshmallow import Schema, fields
 
 
 class OpenaiResponseSerializer(Schema):
-    answers = fields.List(fields.Str())
+    answer = fields.Method("get_answer")
 
-    @post_dump
-    def postprocess(self, data, many, **kwargs):
-        return " ".join(data["answers"])
+    def get_answer(self, data):
+        answer = ""
+        for choice in data["choices"]:
+            answer += re.sub("[\n?]+", "", choice["text"])
+        answer += "..."
+        return answer
