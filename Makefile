@@ -50,12 +50,12 @@ dev:
 
 pip-update:
 	@(\
-      pip-compile --output-file=requirements/common.txt -U requirements/common.in &&  \
-      pip-compile --output-file=requirements/cli.txt -U requirements/cli.in &&  \
-      pip-compile --output-file=requirements/website.txt -U requirements/website.in &&  \
-      pip-compile --output-file=requirements/dev.txt -U requirements/dev.in && \
-      pip-compile --output-file=requirements/slack.txt -U requirements/slack.in && \
-      pip-compile --output-file=requirements/test.txt -U requirements/test.in  \
+      pip-compile --output-file=requirements/common.txt -U requirements/common.in --resolver=backtracking &&  \
+      pip-compile --output-file=requirements/cli.txt -U requirements/cli.in --resolver=backtracking && \
+      pip-compile --output-file=requirements/website.txt -U requirements/website.in --resolver=backtracking &&  \
+      pip-compile --output-file=requirements/dev.txt -U requirements/dev.in --resolver=backtracking && \
+      pip-compile --output-file=requirements/slack.txt -U requirements/slack.in --resolver=backtracking && \
+      pip-compile --output-file=requirements/test.txt -U requirements/test.in --resolver=backtracking  \
 		)
 
 run-api:
