@@ -7,5 +7,7 @@ jobs:
       - uses: actions/checkout@master
         with:
           fetch-depth: 1
-      - run: make dev
-      - run: make test
+      - name: install just
+        run: wget https://github.com/casey/just/releases/download/1.9.0/just-1.9.0-x86_64-unknown-linux-musl.tar.gz -O - | sudo tar -xz -C /usr/local/bin just
+      - run: just dev
+      - run: just test
