@@ -1,0 +1,14 @@
+FROM python:3.11-alpine AS builder
+COPY requirements/* /tmp/
+RUN pip install -U --no-cache-dir pip && \
+    pip install --prefix /local --no-cache-dir pip && \
+    pip install --prefix /local -I --no-cache-dir -r /tmp/common.txt
+
+FROM python:3.11-alpine
+ENV PYTHONUNBUFFERED=1
+RUN adduser --home /app --disabled-password app
+COPY --from=builder /local/ /usr/local
+COPY --chown=app:app . /app
+USER app
+WORKDIR /app
+CMD ["hypercorn", "--bind", "0.0.0.0:8000", "--access-logfile", "-", "--error-logfile", "-", "run-api:api"]
