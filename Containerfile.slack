@@ -11,4 +11,4 @@ COPY --from=builder /local/ /usr/local
 COPY --chown=app:app . /app
 USER app
 WORKDIR /app
-CMD ["ptyhon", "slack.py"]
+CMD ["python", "slack.py"]
