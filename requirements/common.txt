@@ -43,7 +43,7 @@ itsdangerous==2.1.2
     # via quart
 jinja2==3.1.2
     # via quart
-markupsafe==2.1.1
+markupsafe==2.1.2
     # via
     #   jinja2
     #   quart
@@ -56,11 +56,11 @@ packaging==23.0
     #   webargs
 priority==2.0.0
     # via hypercorn
-quart==0.17.0
+quart==0.18.3
     # via
     #   -r requirements/common.in
     #   quart-rate-limiter
-quart-rate-limiter==0.7.0
+quart-rate-limiter==0.8.0
     # via -r requirements/common.in
 rfc3986[idna2008]==1.5.0
     # via httpx
@@ -70,9 +70,7 @@ sniffio==1.3.0
     #   httpcore
     #   httpx
 toml==0.10.2
-    # via
-    #   hypercorn
-    #   quart
+    # via hypercorn
 webargs==8.2.0
     # via -r requirements/common.in
 werkzeug==2.2.2
