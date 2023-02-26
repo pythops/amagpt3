@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file=requirements/common.txt --resolver=backtracking requirements/common.in
 #
-aiofiles==22.1.0
+aiofiles==23.1.0
     # via quart
 anyio==3.6.2
     # via httpcore
@@ -73,7 +73,7 @@ toml==0.10.2
     # via hypercorn
 webargs==8.2.0
     # via -r requirements/common.in
-werkzeug==2.2.2
+werkzeug==2.2.3
     # via quart
 wsproto==1.2.0
     # via hypercorn
