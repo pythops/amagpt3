@@ -23,17 +23,20 @@ async def website():
 @pytest_asyncio.fixture
 async def openai_response():
     return {
-        "id": "cmpl-6FKpO9OwNL7FVuEWdL1FTBSxhnPg7",
-        "object": "text_completion",
-        "created": 1669113002,
-        "model": "text-babbage-001",
         "choices": [
             {
-                "text": "?\n\nAn answer",
+                "finish_reason": "stop",
                 "index": 0,
-                "logprobs": None,
-                "finish_reason": "length",
+                "message": {
+                    "content": "The biggest black hole in the universe is currently believed to be TON 618, which is located about 10.4 billion light-years away from Earth. It has "
+                    "a mass estimated to be around 66 billion times that of the sun. However, there may be even larger black holes that have not yet been discovered.",
+                    "role": "assistant",
+                },
             }
         ],
-        "usage": {"prompt_tokens": 5, "completion_tokens": 20, "total_tokens": 25},
+        "created": 1679143283,
+        "id": "chatcmpl-6vQA7b6MWyfi8lGC723Np7v6CFO41",
+        "model": "gpt-3.5-turbo-0301",
+        "object": "chat.completion",
+        "usage": {"completion_tokens": 66, "prompt_tokens": 28, "total_tokens": 94},
     }
