@@ -7,7 +7,10 @@ async def ask(question):
     url = config.OPENAI_URL
     headers = {"Authorization": f"Bearer {config.OPENAI_API_KEY}"}
     body = {
-        "prompt": question,
+        "messages": [
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": question},
+        ],
         "model": config.OPENAI_MODEL,
         "temperature": config.OPENAI_MODEL_AUDACITY,
         "max_tokens": config.OPENAI_MAX_TOKEN,
