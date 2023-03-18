@@ -1,7 +1,7 @@
 <h1 align="center">Ask Me Anything GPT-3</h1>
 
 <div align="cetner">
-  <p align="center">A simple wrapper for OpenAI GPT-3 question/answer engine.</p>
+  <p align="center">A simple wrapper for OpenAI chatgpt</p>
   <img src="assets/website.png" alt="AMA GTP3"></img>
 </div>
 
@@ -15,7 +15,7 @@ Here is a free and publicly available instance that you can play with
 
 **Note**:
 I put some limitations to avoid explode my budget.
-the question and the answer has a max of **100 characters**
+the question and the answer has a max of **200 characters**
 
 <br>
 
@@ -96,10 +96,6 @@ You can get one by signing up for free here 👉 https://openai.com/api/
 $ export OPENAI_MODEL=<MODEL>
 ```
 
-By default, `text-babbage-001` model is used.
-
-More infos here 👉 https://beta.openai.com/docs/api-reference/models/list
-
 <br>
 
 For Slack bot, you need to provide the following tokens:
@@ -119,7 +115,7 @@ More infos here 👉 https://api.slack.com/bot-users
 
 ```
 $ just run-api
-[2022-11-22 13:39:20 +0100] [2381451] [INFO] Running on http://127.0.0.1:8000 (CTRL + C to quit)
+[2023-03-18 13:26:30 +0100] [1870524] [INFO] Running on http://127.0.0.1:8000 (CTRL + C to quit)
 ```
 
 Or, run the api inside the container
@@ -137,18 +133,18 @@ $ http POST :8000/ask question="Your question here"
 Example:
 
 ```
-$ http POST :8000/ask question="how cool is elon musk ?"
+$ http POST :8000/ask question="What is the biggest black hole in the universe ?"
 HTTP/1.1 200
-content-length: 127
+content-length: 289
 content-type: application/json
-date: Tue, 22 Nov 2022 12:38:45 GMT
+date: Sat, 18 Mar 2023 12:29:11 GMT
 ratelimit-limit: 1
-ratelimit-remaining: 0
+ratelimit-remaining: 1
 ratelimit-reset: 0
 server: hypercorn-h11
 
 {
-"answer": "Elon Musk is a business magnate and entrepreneur who co-founded PayPal and Tesla Motors. He also founded SpaceX..."
+    "answer": "The biggest black hole discovered so far is called TON 618 and it is located about 10.4 billion light-years away from Earth. It has a mass estimated to be around 66 billion times that of the Sun. However, there may be even larger black holes that have not yet been discovered."
 }
 ```
 
@@ -156,7 +152,7 @@ server: hypercorn-h11
 
 ```
 $ just run-website
-[2022-11-22 13:39:48 +0100] [2381963] [INFO] Running on http://127.0.0.1:8000 (CTRL + C to quit)
+[2023-03-18 13:29:59 +0100] [1874551] [INFO] Running on http://127.0.0.1:8000 (CTRL + C to quit)
 ```
 
 Or, run the website inside the container
