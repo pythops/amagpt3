@@ -7,6 +7,10 @@
 
 <br>
 
+## 🚀 TUI interface
+
+Check out [tenere](https://github.com/pythops/tenere) project
+
 ## 💫 Demo
 
 Here is a free and publicly available instance that you can play with
