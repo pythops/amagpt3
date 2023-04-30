@@ -1,3 +1,11 @@
+## ⚠️ Not maintained anymore ⚠️
+
+## Focus shifted to Tenere https://github.com/pythops/tenere
+
+<br>
+<br>
+<br>
+
 <h1 align="center">Ask Me Anything GPT-3</h1>
 
 <div align="cetner">
